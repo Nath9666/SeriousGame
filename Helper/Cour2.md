@@ -19,8 +19,6 @@ par exemple les principes de fonctionnement des noveaux mecanisme TIC oude nouve
 - formation
 - projet concret
 
-
-
 ## Phase de dev
 
 - user centered design
@@ -31,3 +29,7 @@ par exemple les principes de fonctionnement des noveaux mecanisme TIC oude nouve
 
 - roll-out
 - distribution channels and marketing
+
+## parent -enfant 
+
+dans un jeux, quand on a un parent et un enfant, les transformations apportées au parent sont répercutées sur l'enfant
