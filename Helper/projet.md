@@ -114,9 +114,9 @@ Un serious game immersif et éducatif sur le thème de la Seconde Guerre mondial
 ### **3. Ressources nécessaires :**
 - **Équipe pluridisciplinaire :** Game designers, historiens, scénaristes, développeurs, artistes.
 - **Outils :**
-   - **Unity/Unreal Engine :** Pour la création du jeu.
+   - **Unity :** Pour la création du jeu.
    - **Ink** ou **Twine :** Pour la narration dynamique.
-   - Bases de données historiques pour garantir l’authenticité.
+   - **Bases de données historiques :** Pour garantir l’authenticité.
 
 
 ## Idées:
