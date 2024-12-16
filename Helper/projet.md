@@ -117,3 +117,8 @@ Un serious game immersif et éducatif sur le thème de la Seconde Guerre mondial
    - **Unity/Unreal Engine :** Pour la création du jeu.
    - **Ink** ou **Twine :** Pour la narration dynamique.
    - Bases de données historiques pour garantir l’authenticité.
+
+
+## Idées:
+
+pour passer de mission en mission, reprendre l'annimation de indiana jones ou l'on voit la carte du monde avec un avion (ou train en fonction des zone) qui se déplace de point en point.
