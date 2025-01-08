@@ -1,32 +1,61 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CerceauController : MonoBehaviour
 {
-    public CerveauBehaviour behaviour;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Public Fields
+    public CerceauBehaviour behaviour;
+
+    //private Fields
+    private Material cerceauMaterial;
+
+    // Start is called before the first frame update
+    private void Awake()
+    {
+        cerceauMaterial = GetComponent<MeshRenderer>().material;
+    }
     void Start()
     {
-        
+        StartCoroutine(RandomMove());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Time.deltaTime * 50, 0, 0);
     }
 
-    // This method is called when another collider enters the trigger collider attached to the object where this script is attached
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "EFREIPlayer")
         {
-            Debug.Log("Le joueur a passé à travers l'objet !");
-            // Ajoutez ici le code que vous souhaitez exécuter lorsque le joueur passe à travers l'objet
+            Debug.Log("Object detected");
         }
+    }
+
+    public IEnumerator RandomMove()
+    {
+        while (true)
+        {
+            Vector3 initialPostion = transform.position;
+            Vector3 destinationPosition = new Vector3(Random.Range(-24, 24), 2.2f, Random.Range(-24, 24));
+            float time = 0.0f;
+            while(time <= 1.0f)
+            {
+                time += Time.deltaTime;
+                transform.position = Vector3.Lerp(initialPostion, destinationPosition, time);
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
+    }
+
+    public void SetBehavior(CerceauBehaviour currentBehavior, Color behaviorColor)
+    {
+        Debug.Log("test");
+        behaviour = currentBehavior;
+        cerceauMaterial.color = behaviorColor;
     }
 }
 
-public enum CerveauBehaviour
-{
-    good, bad
-}
+public enum CerceauBehaviour { good, bad}
